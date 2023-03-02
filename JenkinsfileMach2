@@ -19,7 +19,7 @@ stage('RunTestandBuild'){
   steps{
   parallel(
  RunTest:{
- sh "mvn clean package"
+ sh "mvn test"
  },
  
  Build:{
