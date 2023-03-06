@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Doh Tech Releases Nexus Repository</name>
-	      <url>http://172.31.86.70:8081/repository/Doh-Release/</url>
+	      <url>http://54.159.205.108:8081/repository/Doh-Release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Doh Tech Snapshot Nexus Repository </name>
-	      <url>http://172.31.86.70:8081/repository/Doh-snapshot/</url>
+	      <url>http://54.159.205.108:8081/repository/Doh-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
