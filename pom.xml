@@ -21,7 +21,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://34.228.42.49:9000/</sonar.host.url>
+		<sonar.host.url>http://54.242.163.187:9000</sonar.host.url>
 		<sonar.login>squ_39de107b7e0734bfee24252162f4ce3f6bc5ece9</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Doh Tech Releases Nexus Repository</name>
-	      <url>http://34.224.101.227:8081/repository/doh-release/</url>
+	      <url>http://54.243.27.106:8081/repository/doh-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Doh Tech Snapshot Nexus Repository </name>
-	      <url>http://34.224.101.227:8081/repository/doh-snapshort/</url>
+	      <url>http://54.243.27.106:8081/repository/doh-snapshort/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
