@@ -9,8 +9,8 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to Doh Tech Private Limited. laurel,MD,USA </h1>
-<h1 align="center"> Doh Tech Very Good Training center for DevOps with AWS in Laurel Md USA and also for Job Assitance, job Support also...Teaching Real Time scnerios</h1>
+<h1 align="center">Welcome to Doh Tech Private Limited. Landover,MD,USA </h1>
+<h1 align="center"> Doh Tech Very Good Training Center For DevOps With AWS in Landover Md USA and Also For Job Assitance, job Support also...Teaching Real Time scnerios</h1>
 <hr>
 <br>
 	<h1><h3> Server Side IP Address </h3><br>
@@ -35,12 +35,12 @@ out.println("Server Host Name :: "+inetAddress.getHostName());
 	</span>
 	<span style="font-weight: bold;">
 		Doh Tech, 
-		Laurel, Bowie Road, Beside Briarwood drive ,
-		Laurel,
-		+2406364161
-		ntomfondon@gmail.com
+		Landover, Warfied dr, Landover ,
+		Landover,
+		+3017411146
+		ntomfondoh@gmail.com
 		<br>
-		<a href="mailto:ntomfondon@gmail.com">Mail to Doh Tech</a>
+		<a href="mailto:ntomfondoh@gmail.com">Mail to Doh Tech</a>
 	</span>
 </div>
 <hr>
@@ -48,7 +48,7 @@ out.println("Server Host Name :: "+inetAddress.getHostName());
 <hr>
 <hr>
 <p align=center>Doh Tech - Consultant, Training, Development Center.</p>
-<p align=center><small>Copyrights 2023 by <a href="http://Dohtech.com/">Doh Tech,Laurel</a> </small></p>
+<p align=center><small>Copyrights 2023 by <a href="http://Dohtech.com/">Doh Tech,Landover</a> </small></p>
 
 </body>
 </html>
