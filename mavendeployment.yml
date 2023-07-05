@@ -1,27 +1,31 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mavenwebapp
+  name: mvndeployment
 spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gloryapp
   template:
     metadata:
       labels:
-        app: mavenwebapp
+        app: gloryapp
     spec:
       containers:
-        - name: mavenwebapp
+        - name: glorycontainer
           image: doh1/maven-web-app:15
           ports:
-            - containerPort: 8080
+          - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: mavenwebappsvc
+  name: glorysvc
 spec:
   type: LoadBalancer
   ports:
     - port: 80
       targetPort: 8080
   selector:
-    app: mavenwebapp
+    app: gloryapp
