@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
         - name: mavenwebapp
-          image: doh1/maven-web-app:12
+          image: doh1/maven-web-app:15
           ports:
             - containerPort: 8080
 ---
