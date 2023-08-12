@@ -37,7 +37,7 @@ pipeline{
       }
       stage("Creating Docker Container"){
           steps{
-              sh "docker rm -f $(docker ps -aq)"
+              sh "docker rm -f doh"
               sh "docker run --name doh -p 7777:8080 -d doh1/java-web-app:${BuildNumber}"
           }
       }
