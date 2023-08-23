@@ -1,0 +1,116 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: springapp
+  template:
+    metadata:
+      labels:
+        app: springapp
+    spec:
+      containers:
+        - name: containerapp
+          image: doh1/spring-boot-app:1
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MONGO_DB_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: mongoconfigmap
+                  key: username
+            - name: MONGO_DB_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: mongoconfigmap
+                  key: password
+            - name: MONGO_DB_HOSTNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: mongoconfigmap
+                  key: hostname
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: springbootsvc
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 8080
+  selector:
+    app: springapp
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongoapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongoapp
+  template:
+    metadata:
+      labels:
+        app: mongoapp
+    spec:
+      containers:
+        - name: mongocontainer
+          image: mongo
+          ports:
+            - containerPort: 27017
+          resources:
+            requests:
+              cpu: 300m
+              memory: 250Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
+          env:
+            - name: MONGO_INITDB_ROOT_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: mongoconfigmap
+                  key: username
+            - name: MONGO_INITDB_ROOT_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: mongoconfigmap
+                  key: password
+          volumeMounts:
+            - name: mongovol
+              mountPath: /data/db
+      volumes:
+        - name: mongovol
+          persistentVolumeClaim:
+            claimName: mongovol
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongosvc
+spec:
+  type: ClusterIP
+  ports:
+    - port: 27017
+      targetPort: 27017
+  selector:
+    app: mongoapp
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mongovol
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
