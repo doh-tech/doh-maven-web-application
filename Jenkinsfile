@@ -31,6 +31,11 @@ pipeline{
                 sh "mvn clean deploy"
             }
         }
+        stage("Deploying Into K8s"){
+            steps{
+                sh "kubectl apply -f doh-spring-boot-app.yml"
+            }
+        }
         
     
         
