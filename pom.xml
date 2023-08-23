@@ -21,7 +21,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://44.201.194.182:9000/</sonar.host.url>
+		<sonar.host.url>http://44.204.151.231:9000/</sonar.host.url>
 		<sonar.login>squ_957436872d7a61d9fceaf73db20366fd5508a513</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Doh Tech Releases Nexus Repository</name>
-	      <url>http://34.238.44.23:8081/repository/wallmart-release/</url>
+	      <url>http://44.211.197.38:8081/repository/wallmart-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Doh Tech Snapshot Nexus Repository </name>
-	      <url>http://34.238.44.23:8081/repository/wallmart-snapshot/</url>
+	      <url>http://44.211.197.38:8081/repository/wallmart-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
