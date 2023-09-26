@@ -50,3 +50,21 @@ spec:
       targetPort: 8080
   selector:
     app: appjava
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingressrul
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: javaapp.doh1cloud.click
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: javasvc
+                port:
+                  number: 80
