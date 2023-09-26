@@ -19,11 +19,11 @@ spec:
             - containerPort: 8080
           resources:
             requests:
-              cpu: 200m
-              memory: 228Mi
+              cpu: 700m
+              memory: 448Mi
             limits:
-              cpu: 400m
-              memory: 312Mi
+              cpu: 900m
+              memory: 712Mi
           livenessProbe:
             httpGet:
               path: /java-web-app
