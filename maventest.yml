@@ -44,7 +44,7 @@ kind: Service
 metadata:
   name: javasvc
 spec:
-  type: LoadBalancer
+  type: clusterIP
   ports:
     - port: 80
       targetPort: 8080
