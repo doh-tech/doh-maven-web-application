@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: javadeployment
-          image: doh1/java-web-app:2
+          image: doh1/java-web-app:1
           ports:
             - containerPort: 8080
           resources:
