@@ -11,7 +11,7 @@ pipeline{
     
     stages{
         
-        stage("Downlaoding The Code"){
+        stage("Downlaoding The Code from Github"){
             steps{
             git branch: 'development', credentialsId: 'cc2dc07f-04dd-4250-8fb4-343f97ae5933', url: 'https://github.com/doh-tech/doh-maven-web-application.git'
             }
