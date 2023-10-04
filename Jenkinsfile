@@ -21,7 +21,7 @@ pipeline{
                 sh "mvn clean package"
             }
         }
-        stage("Running SonarGube Report"){
+        stage("Running SonarGube Report1"){
             steps{
                 sh "mvn sonar:sonar"
             }
