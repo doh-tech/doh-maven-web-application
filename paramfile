@@ -1,0 +1,38 @@
+pipeline{
+    agent any
+    tools{
+        maven "maven3.9.5"
+    }
+    options {
+  timestamps()
+  }
+  parameters {
+  choice choices: ['master ', 'development', 'stage'], description: 'chose branch name', name: 'branchname'
+  string defaultValue: 'doh', description: 'select name', name: 'name'
+}
+    stages{
+        stage("Gitdowload"){
+            steps{
+         git branch: "${params.branchname}", credentialsId: 'a8461ebb-f86d-4073-b673-8333b85029da', url: 'https://github.com/doh-tech/doh-maven-web-application.git'
+         sh "echo ${params.name}"
+        }
+        }
+        stage("Build"){
+            steps{
+             parallel(
+            RunTest: {
+                sh "mvn clean test"
+            },
+            Build: {
+                sh "mvn clean package"
+            }
+        )   
+        }
+        }
+        
+        
+        
+        
+        
+    }//closing stage
+    }//closing pipeline
