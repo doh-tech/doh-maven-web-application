@@ -11,7 +11,7 @@
      
      stages{
      
-         stage("Gitdownload"){
+         stage("GitCheckOut"){
              steps{
                  git branch: 'development', credentialsId: '95783d07-8cdc-4a88-8c99-18767cfacc37', url: 'https://github.com/doh-tech/doh-maven-web-application.git'
          }
