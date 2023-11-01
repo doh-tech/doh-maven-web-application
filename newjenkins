@@ -21,7 +21,7 @@
                  sh "mvn clean package"
          }
          }
-         stage("Execute SonarGube Report"){
+         stage("Execute SonarGube report"){
              steps{
                  sh "mvn sonar:sonar"
          }
