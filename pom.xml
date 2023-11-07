@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Doh Tech Releases Nexus Repository</name>
-	      <url>http://44.212.6.240:8081/repository/Walmart-release/</url>
+	      <urlhttp://54.167.202.143:8081/repository/walmart-Release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Doh Tech Snapshot Nexus Repository </name>
-	      <url>http://44.212.6.240:8081/repository/Walmart-snapshot/</url>
+	      <url>http://54.167.202.143:8081/repository/walmart-Snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
