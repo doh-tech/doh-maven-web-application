@@ -1,0 +1,60 @@
+@Library("jenkinsharelibrary") _
+
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: '']])
+def BuildNumber = BUILD_NUMBER
+pipeline{
+    
+    agent any
+    
+     tools{
+         maven "maven3.9.5"
+     }
+    
+    stages{
+        stage("GitCheckOut"){
+            steps{
+                sendSlackNotifications("STARTED")
+          git branch: 'development', credentialsId: '8d4866e4-1a6f-442b-ab69-1cd70f4a04f2', url: 'https://github.com/doh-tech/doh-maven-web-application.git'      
+        }
+        }
+        stage("Build The Code"){
+            steps{
+                sh "mvn clean package"
+        }
+        }
+        stage("Executing SonarQube Report"){
+            steps{
+                sh "mvn clean sonar:sonar"
+            }
+        }
+        stage("Building Docker Image"){
+            steps{
+                sh "docker build -t doh1/maven-web-app:${BuildNumber} ."
+        }
+        }
+        stage("Ofloading Artifact IntoDockerHub"){
+            steps{
+             withCredentials([string(credentialsId: '084ae30a-67c9-467a-a979-7673951df640', variable: 'Githubnewcredential')]) {
+            sh "docker login -u doh1 -p ${Githubnewcredential}"
+          }
+                 
+               
+          sh "docker push doh1/maven-web-app:${BuildNumber}"      
+        }
+        }
+        stage("Deploying Into Kubernetes Cluster"){
+         steps{
+             sh "kubectl apply -f mavendeployment.yml "
+         }   
+        }
+}//closing stage
+post {
+  success {
+  sendSlackNotifications(currentBuild.result) 
+  }
+  failure {
+   sendSlackNotifications(currentBuild.result)
+  }
+}
+
+}//closing pipeline
