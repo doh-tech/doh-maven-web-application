@@ -9,7 +9,7 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to FONGANG GLORY MAMERICE  Tech Private Limited. Landover,MD,USA </h1>
+<h1 align="center">Welcome to DOH Tech Private Limited. Landover,MD,USA </h1>
 <h1 align="center"> GLORY Tech Very Good Training Center For DevOps With AWS in Landover Md USA and Also For Job Assitance, job Support also...Teaching Real Time scnerios</h1>
 <hr>
 <br>
