@@ -95,13 +95,13 @@
 	<distributionManagement>
 	
 	    <repository>
-	      <id>nexus</id>
+	      <id>doh</id>
 	      <name>Doh Tech Releases Nexus Repository</name>
 	      <url>http://34.239.0.15:8081/repository/facebook-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
-	      <id>nexus</id>
+	      <id>doh</id>
 	      <name>Doh Tech Snapshot Nexus Repository </name>
 	      <url>http://34.239.0.15:8081/repository/facebook-snapshort/</url>
 	    </snapshotRepository>
