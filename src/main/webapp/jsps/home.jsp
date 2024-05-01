@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1 align="center">Welcome to METHON MAN Tech Private Limited. Landover,MD,USA </h1>
-<h1 align="center"> GLORY Tech Very Good Training Center For DevOps With AWS in Landover Md USA and Also For Job Assitance, job Support also...Teaching Real Time scnerios</h1>
+<h1 align="center"> DOH AUGUSTIN Tech Very Good Training Center For DevOps With AWS in Landover Md USA and Also For Job Assitance, job Support also...Teaching Real Time scnerios</h1>
 <hr>
 <br>
 	<h1><h3> Server Side IP Address </h3><br>
