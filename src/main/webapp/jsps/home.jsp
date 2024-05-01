@@ -9,7 +9,7 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to METHON MAN Tech Private Limited. Landover,MD,USA </h1>
+<h1 align="center">Welcome to THANK GOD Tech Private Limited. Landover,MD,USA </h1>
 <h1 align="center"> DOH AUGUSTIN Tech Very Good Training Center For DevOps With AWS in Landover Md USA and Also For Job Assitance, job Support also...Teaching Real Time scnerios</h1>
 <hr>
 <br>
