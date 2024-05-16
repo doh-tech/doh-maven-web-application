@@ -9,7 +9,7 @@ pipeline{
      }
     stages{
         
-        stage("Git Clone"){
+        stage("Git Clone1"){
             steps{
               sendSlackNotifications('STARTED')   
             git branch: 'development', credentialsId: '72e559b7-e635-4226-9a20-2eadbb1d91c8', url: 'https://github.com/doh-tech/doh-maven-web-application.git'    
